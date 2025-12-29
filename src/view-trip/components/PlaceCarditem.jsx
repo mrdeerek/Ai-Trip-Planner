@@ -16,9 +16,9 @@ function PlaceCarditem({ place }) {
       textQuery: place.placeName
     }
     const result = await GetPlaceDetails(data).then(resp => {
-      console.log(resp.data.places[0].photos[1].name)
+      console.log(resp.data.places[0].photos[0].name)
 
-      const PhotoUrl = PHOTO_REF_URL.replace('{NAME}', resp.data.places[0].photos[1].name);
+      const PhotoUrl = PHOTO_REF_URL.replace('{NAME}', resp.data.places[0].photos[0].name);
       setPhotoUrl(PhotoUrl);
 
     })
